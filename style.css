@@ -61,19 +61,44 @@ main{
     
 }
 .navs>ul>li>a{
+    position: relative;
     text-decoration: none;
     color: white;
     font-size: 17px;
     font-weight: 400;
 }
-.btn>a{
-    padding: 8px 20px;
+.navs ul li a:before{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    height: 1px;
+    width: 0;
+    background: #D92D61;
+    border-radius: 50px;
+    transition: width 0.3s ease;
+}
+.navs ul li a:hover:before{
+    width: 100%;
+}
+
+
+
+
+.btn{
     color: white;
-    background-color: #D92D61;
-    text-decoration: none;
-    border-radius: 20px;
     font-size: 15px;
     font-weight: 400;
+    text-decoration: none;
+    padding: 8px 20px;
+    background-color: #D92D61;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #D92D61;
+}
+
+.btn:hover{
+    background-color: transparent;
+    border: 1px solid #D92D61;
 }
 .hero{
     /* position: relative; */
@@ -117,9 +142,16 @@ main{
     font-size: 12px;
     font-weight: 600;
     color: white;
+    background-color: transparent;
     text-decoration: none;
     letter-spacing: 1.5px;
-    
+    transition: all 0.3s ease-in-out;
+}
+
+.hero-flag:hover{
+    background-color: white;
+    color: #D92D61;
+
 }
 
 .right h1{
@@ -144,8 +176,9 @@ main{
     margin-bottom: 28px;
 }
 .hero-btn{
-    padding: 8px 20px;
+    padding: 9px 20px;
     background-color: #D92D61;
+    border: 1px solid #D92D61;
     color: white;
     text-decoration: none;
     border-radius: 18px;
@@ -153,6 +186,11 @@ main{
     font-size: 17px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+    transition: all 0.3s ease-in-out;
+}
+.hero-btn:hover{
+    background-color: transparent;
+    border: 1px solid #D92D61;
 }
 
 /* footer{
